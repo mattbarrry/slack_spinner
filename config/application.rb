@@ -18,5 +18,8 @@ module SlackSpinner
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Config ViewComponent/Lookbook previews to work with RSpec
+    config.view_component.preview_paths << Rails.root.join('spec/components/previews')
   end
 end
