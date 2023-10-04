@@ -35,6 +35,10 @@
 
 tmp/
 
+# Config Files
+config/slack.yml
+
+# RubyMine
 .idea/
 
 node_modules/

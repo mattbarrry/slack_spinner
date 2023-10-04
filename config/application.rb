@@ -21,5 +21,7 @@ module SlackSpinner
 
     # Config ViewComponent/Lookbook previews to work with RSpec
     config.view_component.preview_paths << Rails.root.join('spec/components/previews')
+
+    config.slack = Rails.application.config_for(:slack)
   end
 end

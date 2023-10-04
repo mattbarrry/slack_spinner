@@ -1,0 +1,12 @@
+default: &default
+  CLIENT_ID: <%= ENV['SLACK_CLIENT_ID'] %>
+  CLIENT_SECRET: <%= ENV['SLACK_CLIENT_SECRET'] %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
