@@ -1,6 +1,9 @@
 default: &default
-  CLIENT_ID: <%= ENV['SLACK_CLIENT_ID'] %>
-  CLIENT_SECRET: <%= ENV['SLACK_CLIENT_SECRET'] %>
+  client_id: <%= ENV['SLACK_CLIENT_ID'] %>
+  client_secret: <%= ENV['SLACK_CLIENT_SECRET'] %>
+  scope: "incoming-webhook,commands,users:read,team:read"
+  base_url: "https://slack.com/api"
+
 
 development:
   <<: *default

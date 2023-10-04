@@ -6,5 +6,9 @@ Rails.application.routes.draw do
 
   resource :home, only: :show
 
+  namespace :slack do
+    resource :auth, only: :show
+  end
+
   mount Lookbook::Engine, at: '/lookbook' if Rails.env.development?
 end
