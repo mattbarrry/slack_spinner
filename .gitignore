@@ -42,3 +42,7 @@ config/slack.yml
 .idea/
 
 node_modules/
+
+# local ssl config
+config/ssl/slackspinner.local.crt
+config/ssl/slackspinner.local.key
