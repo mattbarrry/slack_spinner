@@ -13,7 +13,7 @@ module Slack
       params = authorization_params(code:, redirect_uri:)
       response = api.get('oauth.v2.access', params)
 
-      JSON.parse(response.body, symbolize_keys: true)
+      JSON.parse(response.body, symbolize_names: true)
     end
 
     # private
