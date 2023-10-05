@@ -3,6 +3,7 @@ default: &default
   client_secret: <%= ENV['SLACK_CLIENT_SECRET'] %>
   scope: "incoming-webhook,commands,users:read,team:read"
   base_url: "https://slack.com/api"
+  auth_url: "https://slack.com/oauth/v2/authorize"
 
 
 development:
