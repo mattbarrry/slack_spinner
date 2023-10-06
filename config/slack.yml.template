@@ -4,6 +4,7 @@ default: &default
   scope: "incoming-webhook,commands,users:read,team:read"
   base_url: "https://slack.com/api"
   auth_url: "https://slack.com/oauth/v2/authorize"
+  signing_secret: <%= ENV['SLACK_SIGNING_SECRET'] %>
 
 
 development:

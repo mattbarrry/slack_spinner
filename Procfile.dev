@@ -1,2 +1,2 @@
-web: bin/rails s -b 'ssl://slackspinner.local:3000?key=config/ssl/slackspinner.local.key&cert=config/ssl/slackspinner.local.crt'
+web: rdbg -O -n -c "bin/rails s -b 'ssl://slackspinner.local:3000?key=config/ssl/slackspinner.local.key&cert=config/ssl/slackspinner.local.crt'"
 css: bin/rails tailwindcss:watch

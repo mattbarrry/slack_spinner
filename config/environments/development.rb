@@ -70,5 +70,6 @@ Rails.application.configure do
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
 
-  config.hosts << 'slackspinner.local'
+  # Ngrok for webhooks
+  config.hosts += %w[slackspinner.local special-enormously-thrush.ngrok-free.app]
 end
