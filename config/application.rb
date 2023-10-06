@@ -3,7 +3,7 @@ require_relative 'boot'
 require 'rails/all'
 
 if defined?(Rails::Server) && Rails.env.development?
-  require "debug/open_nonstop"
+  require 'debug/open_nonstop'
 end
 
 # Require the gems listed in Gemfile, including any gems

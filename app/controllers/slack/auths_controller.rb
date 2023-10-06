@@ -5,23 +5,21 @@ module Slack
     skip_before_action :verify_authenticity_token
 
     def show
-      token = slack_api.new_access_token(code: params[:code], redirect_uri: slack_auth_url)
-
       redirect_to root_url, alert: token_error_message(token) unless token[:ok]
 
       team = Team.slack_lookup(token)
 
-      if team.save
-        redirect_to root_url, notice: success_message
-      else
-        redirect_to root_url, alert: error_message
-      end
+      team.save ? (redirect_to root_url, notice: success_message) : (redirect_to root_url, alert: error_message)
     end
 
     private
 
     def slack_api
       @slack_api ||= Slack::Api.new
+    end
+
+    def token
+      @token ||= slack_api.new_access_token(code: params[:code], redirect_uri: slack_auth_url)
     end
 
     def token_error_message(token)
